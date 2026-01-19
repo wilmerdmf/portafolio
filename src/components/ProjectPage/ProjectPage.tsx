@@ -1,4 +1,5 @@
-import { AnimatePresence, motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 import ProjectCard from "./ProjectCard";
 import { useProjects } from "../../hooks";
 import { projectsConfig, sections } from "../../config";
@@ -6,6 +7,8 @@ import { FadeIn } from "../common";
 
 const ProjectPage = () => {
   const { filters, filtered, selectedFilter, setSelectedFilter } = useProjects();
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, amount: 0.1 });
 
   return (
     <section className="projects-container" id={sections.projects}>
@@ -33,49 +36,56 @@ const ProjectPage = () => {
         </FadeIn>
 
         <motion.div
+          ref={ref}
           className="projects-list"
-          layout
           initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.1 }}
+          animate={isInView ? "visible" : "hidden"}
+          key={selectedFilter}
           variants={{
+            hidden: { opacity: 0 },
             visible: {
+              opacity: 1,
               transition: {
                 staggerChildren: 0.15,
+                delayChildren: 0.1,
               },
             },
           }}
         >
-          <AnimatePresence mode="popLayout">
-            {filtered.map((p) => (
-              <motion.div
-                key={p.id}
-                layout
-                variants={{
-                  hidden: { opacity: 0, scale: 0.8, y: 30 },
-                  visible: {
-                    opacity: 1,
-                    scale: 1,
-                    y: 0,
-                    transition: {
-                      duration: 0.5,
-                      ease: "easeOut",
-                    },
-                  },
-                }}
-                exit={{
-                  opacity: 0,
-                  scale: 0.8,
-                  y: -20,
+          {filtered.map((p) => (
+            <motion.div
+              key={p.id}
+              variants={{
+                hidden: { opacity: 0, scale: 0.8, y: 30 },
+                visible: {
+                  opacity: 1,
+                  scale: 1,
+                  y: 0,
                   transition: {
-                    duration: 0.3,
+                    duration: 0.5,
+                    ease: "easeOut",
                   },
-                }}
-              >
-                <ProjectCard project={p} />
-              </motion.div>
-            ))}
-          </AnimatePresence>
+                },
+              }}
+            >
+              <ProjectCard project={p} />
+            </motion.div>
+          ))}
+
+          {filtered.length === 0 && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              style={{
+                textAlign: "center",
+                padding: "3rem",
+                color: "#c1c6d9",
+                gridColumn: "1 / -1",
+              }}
+            >
+              <p>No hay proyectos en esta categoría</p>
+            </motion.div>
+          )}
         </motion.div>
       </div>
     </section>
