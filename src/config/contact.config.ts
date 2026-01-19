@@ -1,0 +1,7 @@
+export const contactInfo = {
+  email: "wilmerdmf@gmail.com",
+  phone: "+57 314-7604071",
+  whatsappLink: "https://wa.me/573147604071",
+  linkedin: "https://linkedin.com/in/wilmer-medina-384b26257",
+  github: "https://github.com/wilmerdmf",
+} as const;
