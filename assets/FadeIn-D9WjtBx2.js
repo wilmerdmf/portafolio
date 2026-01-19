@@ -1,0 +1,1 @@
+import{j as a,m as r}from"./index-CoQGso_M.js";const u=({children:t,delay:i=0,duration:e=.5,direction:o="up",className:n})=>{const s={up:{y:40},down:{y:-40},left:{x:40},right:{x:-40}};return a.jsx(r.div,{initial:{opacity:0,...s[o]},whileInView:{opacity:1,y:0,x:0},viewport:{once:!0,amount:.3},transition:{duration:e,delay:i,ease:"easeOut"},className:n,children:t})};export{u as F};
