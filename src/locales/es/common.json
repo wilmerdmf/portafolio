@@ -1,0 +1,16 @@
+{
+  "nav": {
+    "projects": "Proyectos",
+    "about": "Sobre mí",
+    "skills": "Skills",
+    "contact": "Contacto",
+    "openMenu": "Abrir menú",
+    "closeMenu": "Cerrar menú"
+  },
+  "footer": {
+    "backToTop": "Volver al inicio",
+    "availability": "Disponible para proyectos freelance.",
+    "builtWith": "Construido con React, TypeScript y Vite.",
+    "rights": "© {{year}} — {{name}}"
+  }
+}

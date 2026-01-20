@@ -1,0 +1,17 @@
+{
+  "label": "Proyectos",
+  "title": "Mis proyectos destacados",
+  "filters": {
+    "all": "Todos",
+    "fullstack": "Fullstack",
+    "frontend": "Frontend",
+    "backend": "Backend"
+  },
+  "noProjects": "No hay proyectos en esta categoría",
+  "items": {
+    "calculadora": {
+      "title": "Calculadora de Comisiones",
+      "description": "Aplicación web para calcular comisiones, diferencias y conversiones entre múltiples monedas. Soporta tasas escalonadas, persistencia de datos y cálculos en tiempo real."
+    }
+  }
+}

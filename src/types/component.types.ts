@@ -7,5 +7,3 @@ export interface ProjectCardProps {
 export interface SkillCardProps {
   skill: Skill;
 }
-
-// AboutCardProps removido - usar AboutCardData directamente

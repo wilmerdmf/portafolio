@@ -1,11 +1,14 @@
 import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
-import { images } from "@/assets";
+import { useTranslation } from "react-i18next";
+import { images } from "../../assets";
 import { useNav } from "../../hooks";
-import { navItems, personalInfo, uiConfig } from "../../config";
+import { navKeys, personalInfo, uiConfig } from "../../config";
+import type { NavKey } from "../../types";
 
 const Header = () => {
   const { isMenuOpen, toggleMenu, handleNavClick } = useNav();
+  const { t } = useTranslation("common");
 
   return (
     <motion.header
@@ -33,7 +36,8 @@ const Header = () => {
         <div className="header-list">
           <button
             onClick={toggleMenu}
-            aria-label={isMenuOpen ? "Cerrar menú" : "Abrir menú"}
+            className="menu-toggle"
+            aria-label={isMenuOpen ? t("nav.closeMenu") : t("nav.openMenu")}
             aria-expanded={isMenuOpen}
           >
             {isMenuOpen ? (
@@ -43,42 +47,13 @@ const Header = () => {
             )}
           </button>
 
-          <motion.ul
-            className={`nav-list ${isMenuOpen ? "open" : ""}`}
-            initial={false}
-            animate={isMenuOpen ? "open" : "closed"}
-            variants={{
-              open: {
-                opacity: 1,
-                y: 0,
-                transition: {
-                  staggerChildren: 0.07,
-                  delayChildren: 0.2,
-                },
-              },
-              closed: {
-                opacity: 0,
-                y: -20,
-                transition: {
-                  staggerChildren: 0.05,
-                  staggerDirection: -1,
-                },
-              },
-            }}
-          >
-            {navItems.map((item) => (
-              <motion.li
-                key={item}
-                onClick={() => handleNavClick(item)}
-                variants={{
-                  open: { opacity: 1, y: 0 },
-                  closed: { opacity: 0, y: -10 },
-                }}
-              >
-                {item}
-              </motion.li>
+          <ul className={`nav-list ${isMenuOpen ? "open" : ""}`}>
+            {navKeys.map((key: NavKey) => (
+              <li key={key} onClick={() => handleNavClick(key)}>
+                {t(`nav.${key}`)}
+              </li>
             ))}
-          </motion.ul>
+          </ul>
         </div>
       </div>
     </motion.header>

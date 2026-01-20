@@ -1,12 +1,15 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import { useTranslation } from "react-i18next";
 import ProjectCard from "./ProjectCard";
 import { useProjects } from "../../hooks";
-import { projectsConfig, sections } from "../../config";
+import { sections } from "../../config";
 import { FadeIn } from "../common";
+import { getFilterTranslationKey } from "../../utils";
 
 const ProjectPage = () => {
   const { filters, filtered, selectedFilter, setSelectedFilter } = useProjects();
+  const { t } = useTranslation("projects");
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.1 });
 
@@ -14,8 +17,8 @@ const ProjectPage = () => {
     <section className="projects-container" id={sections.projects}>
       <div className="projects-content-container max-width-container">
         <FadeIn>
-          <p className="projects-label">{projectsConfig.sectionLabel}</p>
-          <h2 className="projects-title">{projectsConfig.sectionTitle}</h2>
+          <p className="projects-label">{t("label")}</p>
+          <h2 className="projects-title">{t("title")}</h2>
         </FadeIn>
 
         <FadeIn delay={0.2}>
@@ -29,7 +32,7 @@ const ProjectPage = () => {
                 whileTap={{ scale: 0.95 }}
                 transition={{ duration: 0.2 }}
               >
-                {f}
+                {t(getFilterTranslationKey(f))}
               </motion.button>
             ))}
           </div>
@@ -83,7 +86,7 @@ const ProjectPage = () => {
                 gridColumn: "1 / -1",
               }}
             >
-              <p>No hay proyectos en esta categoría</p>
+              <p>{t("noProjects")}</p>
             </motion.div>
           )}
         </motion.div>

@@ -1,8 +1,7 @@
 import { lazy, Suspense } from "react";
 import Header from "./components/Header/Header";
-import { PageLoader } from "./components/common";
+import { PageLoader, LanguageSwitcher } from "./components/common";
 
-// Lazy load de componentes
 const HeroPage = lazy(() => import("./components/HeroPage/HeroPage"));
 const ProjectPage = lazy(() => import("./components/ProjectPage/ProjectPage"));
 const AboutPage = lazy(() => import("./components/AboutPage/AboutPage"));
@@ -14,6 +13,7 @@ function App() {
   return (
     <>
       <Header />
+      <LanguageSwitcher />
       <Suspense fallback={<PageLoader />}>
         <HeroPage />
         <ProjectPage />

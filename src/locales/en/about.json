@@ -1,0 +1,21 @@
+{
+  "title": "About me",
+  "name": "Wilmer Medina",
+  "paragraphs": [
+    "Developer with the ability to adapt to different environments and technologies. I am motivated to learn new tools and contribute to varied projects, from web applications to more technical solutions oriented to processes or data.",
+    "I am currently perfecting my skills in web architecture, interaction design and UI/UX best practices.",
+    "Born in Venezuela, but currently residing in Bogotá, Colombia."
+  ],
+  "education": {
+    "informatics": {
+      "title": "Associate Degree in Computer Science",
+      "description": "Higher Technician in Computer Engineering, graduated from UNERMB, Venezuela.",
+      "date": "Completed in 2021"
+    },
+    "english": {
+      "title": "English Language",
+      "description": "Advanced English course, graduated from CEVAZ, Venezuela.",
+      "date": "Completed in 2020"
+    }
+  }
+}

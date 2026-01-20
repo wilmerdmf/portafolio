@@ -1,0 +1,1 @@
+export { getFilterTranslationKey } from "./translations";

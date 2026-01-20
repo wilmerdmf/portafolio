@@ -1,23 +1,23 @@
-import { footerConfig, personalInfo } from "../../config";
+import { useTranslation } from "react-i18next";
+import { personalInfo } from "../../config";
 import { FadeIn } from "../common";
 
 const Footer = () => {
-  const currentYear = footerConfig.getCurrentYear();
+  const { t } = useTranslation("common");
+  const currentYear = new Date().getFullYear();
 
   return (
     <footer className="footer-container">
       <FadeIn>
         <button className="footer-home-btn" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
-          {footerConfig.backToTopText}
+          {t("footer.backToTop")}
         </button>
 
-        <p className="footer-cta">{footerConfig.availability}</p>
+        <p className="footer-cta">{t("footer.availability")}</p>
 
-        <p className="footer-tech">{footerConfig.builtWith}</p>
+        <p className="footer-tech">{t("footer.builtWith")}</p>
 
-        <p className="footer-id">
-          © {currentYear} — {personalInfo.name}
-        </p>
+        <p className="footer-id">{t("footer.rights", { year: currentYear, name: personalInfo.name })}</p>
       </FadeIn>
     </footer>
   );

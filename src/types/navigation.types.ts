@@ -1,3 +1,3 @@
-export type NavItem = "Proyectos" | "Sobre mí" | "Skills" | "Contacto";
+export type NavKey = "projects" | "about" | "skills" | "contact";
 
 export type SectionId = "projects" | "about" | "skills" | "contact";

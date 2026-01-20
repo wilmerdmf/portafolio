@@ -1,0 +1,10 @@
+{
+  "title": "Contacto",
+  "description": "Estoy disponible para colaborar",
+  "email": {
+    "label": "Gmail"
+  },
+  "whatsapp": {
+    "label": "WhatsApp"
+  }
+}

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import type { NavItem } from "../types";
+import type { NavKey } from "../types";
 import { sectionMap } from "../config";
 
 export const useNav = () => {
@@ -8,7 +8,7 @@ export const useNav = () => {
   const toggleMenu = (): void => setIsMenuOpen((prev) => !prev);
   const closeMenu = (): void => setIsMenuOpen(false);
 
-  const handleNavClick = (item: NavItem): void => {
+  const handleNavClick = (item: NavKey): void => {
     const id = sectionMap[item];
     const el = document.getElementById(id);
     if (el) el.scrollIntoView({ behavior: "smooth" });

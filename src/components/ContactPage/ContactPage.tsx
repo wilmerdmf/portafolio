@@ -1,14 +1,17 @@
 import { Mail, MessageCircle } from "lucide-react";
+import { useTranslation } from "react-i18next";
 import { contactInfo, sections, uiConfig } from "../../config";
 import { FadeIn, ScaleIn } from "../common";
 
 const ContactPage = () => {
+  const { t } = useTranslation("contact");
+
   return (
     <section id={sections.contact} className="contact-container">
       <div className="contact-content-container max-width-container">
         <FadeIn>
-          <h2 className="contact-title">Contacto</h2>
-          <p className="contact-text">Estoy disponible para colaborar</p>
+          <h2 className="contact-title">{t("title")}</h2>
+          <p className="contact-text">{t("description")}</p>
         </FadeIn>
 
         <div className="contact-grid">
@@ -21,7 +24,7 @@ const ContactPage = () => {
             >
               <div>
                 <Mail size={uiConfig.icons.sizes.medium} />
-                <span>Gmail</span>
+                <span>{t("email.label")}</span>
               </div>
               <span>{contactInfo.email}</span>
             </a>
@@ -36,7 +39,7 @@ const ContactPage = () => {
             >
               <div>
                 <MessageCircle size={uiConfig.icons.sizes.medium} />
-                <span>WhatsApp</span>
+                <span>{t("whatsapp.label")}</span>
               </div>
               <span>{contactInfo.phone}</span>
             </a>

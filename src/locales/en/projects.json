@@ -1,0 +1,17 @@
+{
+  "label": "Projects",
+  "title": "My featured projects",
+  "filters": {
+    "all": "All",
+    "fullstack": "Fullstack",
+    "frontend": "Frontend",
+    "backend": "Backend"
+  },
+  "noProjects": "No projects in this category",
+  "items": {
+    "calculadora": {
+      "title": "Commission Calculator",
+      "description": "Web application to calculate commissions, differences and conversions between multiple currencies. Supports tiered rates, data persistence and real-time calculations."
+    }
+  }
+}
