@@ -1,0 +1,1 @@
+import{j as a,m as s}from"./index-CuYrNT3I.js";const m=({children:t,delay:e=0,duration:i=.6,direction:o="left",className:n})=>a.jsx(s.div,{initial:{opacity:0,x:o==="left"?-100:100},whileInView:{opacity:1,x:0},viewport:{once:!0,amount:.3},transition:{duration:i,delay:e,ease:"easeOut"},className:n,children:t});export{m as S};
