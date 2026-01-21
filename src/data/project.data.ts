@@ -1,5 +1,5 @@
-import type { StackType } from "../types";
-import { images } from "../assets";
+import type { StackType } from "@/types";
+import { images } from "@/assets";
 
 export interface ProjectBase {
   id: number;

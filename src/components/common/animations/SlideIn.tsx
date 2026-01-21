@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import type { SlideInProps } from "../../../types";
+import type { SlideInProps } from "@/types";
 
 const SlideIn = ({ children, delay = 0, duration = 0.6, direction = "left", className }: SlideInProps) => {
   return (

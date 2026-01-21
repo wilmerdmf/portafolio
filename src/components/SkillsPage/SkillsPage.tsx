@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 import SkillCard from "./SkillCard";
-import { skills } from "../../data";
-import { sections } from "../../config";
+import { skills } from "@/data";
+import { sections } from "@/config";
 import { FadeIn, StaggerContainer, StaggerItem } from "../common";
 
 const SkillsPage = () => {

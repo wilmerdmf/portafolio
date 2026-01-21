@@ -1,6 +1,6 @@
 import { useState } from "react";
-import type { NavKey } from "../types";
-import { sectionMap } from "../config";
+import type { NavKey } from "@/types";
+import { sectionMap } from "@/config";
 
 export const useNav = () => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import type { StaggerContainerProps } from "../../../types";
+import type { StaggerContainerProps } from "@/types";
 
 const StaggerContainer = ({ children, staggerDelay = 0.1, className }: StaggerContainerProps) => {
   return (

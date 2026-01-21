@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 import AboutCard from "./AboutCard";
-import { sections } from "../../config";
-import { useEducation } from "../../hooks";
+import { sections } from "@/config";
+import { useEducation } from "@/hooks";
 import { FadeIn, SlideIn, StaggerContainer, StaggerItem } from "../common";
 
 const AboutPage = () => {

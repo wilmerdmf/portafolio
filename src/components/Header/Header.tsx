@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { useTranslation } from "react-i18next";
-import { images } from "../../assets";
-import { useNav } from "../../hooks";
-import { navKeys, personalInfo, uiConfig } from "../../config";
-import type { NavKey } from "../../types";
+import { images } from "@/assets";
+import { useNav } from "@/hooks";
+import { navKeys, personalInfo, uiConfig } from "@/config";
+import type { NavKey } from "@/types";
 
 const Header = () => {
   const { isMenuOpen, toggleMenu, handleNavClick } = useNav();

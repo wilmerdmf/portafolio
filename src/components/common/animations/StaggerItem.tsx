@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import type { StaggerItemProps } from "../../../types";
+import type { StaggerItemProps } from "@/types";
 
 const StaggerItem = ({ children, className }: StaggerItemProps) => {
   return (

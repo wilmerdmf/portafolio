@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import { personalInfo } from "../../config";
+import { personalInfo } from "@/config";
 import { FadeIn } from "../common";
 
 const Footer = () => {

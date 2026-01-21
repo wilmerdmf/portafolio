@@ -1,4 +1,4 @@
-import type { NavKey, SectionId } from "../types";
+import type { NavKey, SectionId } from "@/types";
 
 export const navKeys: NavKey[] = ["projects", "about", "skills", "contact"];
 

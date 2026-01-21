@@ -1,7 +1,7 @@
 import { ArrowRight } from "lucide-react";
 import { useTranslation } from "react-i18next";
-import { techIcons } from "../../assets";
-import { contactInfo, sections, uiConfig } from "../../config";
+import { techIcons } from "@/assets";
+import { contactInfo, sections, uiConfig } from "@/config";
 import { FadeIn, SlideIn } from "../common";
 
 const HeroPage = () => {

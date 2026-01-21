@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import type { ScaleInProps } from "../../../types";
+import type { ScaleInProps } from "@/types";
 
 const ScaleIn = ({ children, delay = 0, duration = 0.4, className }: ScaleInProps) => {
   return (

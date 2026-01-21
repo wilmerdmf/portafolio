@@ -1,5 +1,5 @@
-import { techIcons } from "../assets";
-import type { Skill } from "../types";
+import { techIcons } from "@/assets";
+import type { Skill } from "@/types";
 
 export const skills: Skill[] = techIcons.map((tech) => ({
   name: tech.name,

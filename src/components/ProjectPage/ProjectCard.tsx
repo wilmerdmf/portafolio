@@ -1,9 +1,9 @@
 import { memo } from "react";
 import { Github } from "lucide-react";
-import type { ProjectCardProps } from "../../types";
-import { uiConfig } from "../../config";
-import { useImageModal } from "../../hooks";
-import { ImageModal } from "../../components/common";
+import type { ProjectCardProps } from "@/types";
+import { uiConfig } from "@/config";
+import { useImageModal } from "@/hooks";
+import { ImageModal } from "../common";
 
 const ProjectCard = ({ project }: ProjectCardProps) => {
   const { isOpen, openModal, closeModal } = useImageModal();

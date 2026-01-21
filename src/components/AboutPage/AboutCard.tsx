@@ -1,5 +1,5 @@
 import { memo } from "react";
-import type { AboutCardData } from "../../types";
+import type { AboutCardData } from "@/types";
 
 const AboutCard = ({ title, description, date }: AboutCardData) => {
   return (

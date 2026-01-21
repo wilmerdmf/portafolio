@@ -1,5 +1,5 @@
 import { memo, useEffect } from "react";
-import type { ImageModalProps } from "../../types";
+import type { ImageModalProps } from "@/types";
 
 const ImageModal = ({ isOpen, imageUrl, alt, onClose }: ImageModalProps) => {
   useEffect(() => {

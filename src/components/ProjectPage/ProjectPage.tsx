@@ -2,10 +2,10 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { useTranslation } from "react-i18next";
 import ProjectCard from "./ProjectCard";
-import { useProjects } from "../../hooks";
-import { sections } from "../../config";
+import { useProjects } from "@/hooks";
+import { sections } from "@/config";
+import { getFilterTranslationKey } from "@/utils";
 import { FadeIn } from "../common";
-import { getFilterTranslationKey } from "../../utils";
 
 const ProjectPage = () => {
   const { filters, filtered, selectedFilter, setSelectedFilter } = useProjects();

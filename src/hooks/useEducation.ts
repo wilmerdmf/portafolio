@@ -1,6 +1,6 @@
 import { useMemo } from "react";
 import { useTranslation } from "react-i18next";
-import type { AboutCardData } from "../types";
+import type { AboutCardData } from "@/types";
 
 export const useEducation = (): AboutCardData[] => {
   const { t } = useTranslation("about");

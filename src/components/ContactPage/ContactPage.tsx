@@ -1,6 +1,6 @@
 import { Mail, MessageCircle } from "lucide-react";
 import { useTranslation } from "react-i18next";
-import { contactInfo, sections, uiConfig } from "../../config";
+import { contactInfo, sections, uiConfig } from "@/config";
 import { FadeIn, ScaleIn } from "../common";
 
 const ContactPage = () => {

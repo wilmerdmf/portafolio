@@ -1,5 +1,5 @@
 import { SiJavascript, SiTypescript, SiHtml5, SiCss3, SiReact, SiVuedotjs, SiGit, SiNextdotjs } from "react-icons/si";
-import type { TechIcon } from "../../types";
+import type { TechIcon } from "@/types";
 
 export const techIcons: TechIcon[] = [
   { name: "JavaScript", Icon: SiJavascript, color: "#f7de1ea8" },

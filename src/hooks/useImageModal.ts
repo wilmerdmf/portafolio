@@ -1,5 +1,5 @@
 import { useState, useCallback } from "react";
-import type { UseImageModalReturn } from "../types";
+import type { UseImageModalReturn } from "@/types";
 
 export const useImageModal = (initialState = false): UseImageModalReturn => {
   const [isOpen, setIsOpen] = useState<boolean>(initialState);

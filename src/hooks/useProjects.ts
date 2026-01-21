@@ -1,8 +1,8 @@
 import { useState, useMemo } from "react";
 import { useTranslation } from "react-i18next";
-import { projectsBase } from "../data/project.data";
+import { projectsBase } from "@/data/project.data";
 import type { FilterType, Project } from "../types";
-import { filters } from "../types";
+import { filters } from "@/types";
 
 interface UseProjects {
   filters: readonly FilterType[];

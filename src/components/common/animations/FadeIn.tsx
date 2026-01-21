@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import type { FadeInProps } from "../../../types";
+import type { FadeInProps } from "@/types";
 
 const FadeIn = ({ children, delay = 0, duration = 0.5, direction = "up", className }: FadeInProps) => {
   const directionOffset = {

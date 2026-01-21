@@ -1,5 +1,5 @@
 import { memo } from "react";
-import type { SkillCardProps } from "../../types";
+import type { SkillCardProps } from "@/types";
 
 const SkillCard = ({ skill }: SkillCardProps) => {
   return (
